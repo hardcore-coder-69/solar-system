@@ -1,0 +1,104 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fa-star {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: .4;
+    }
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/sun.gif');
+    background-size: cover;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+.earth {
+    width: 60px;
+    height: 60px;
+    background-image: url('assets/earth.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 2s linear infinite;
+}
+
+.moon {
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/moon.png');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    animation: moon-orbit 2s linear infinite;
+}
+
+.orbit {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(-250px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(-250px);
+    }
+}
+
+@keyframes moon-orbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(-70px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(-70px);
+    }
+}
